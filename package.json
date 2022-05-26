@@ -1,6 +1,12 @@
 {
   "name": "angular-p001",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Site desenvolvido em NODEJS com EJS e MariaDB",
+  "author": "Sandro Yaqub Yusuf - KITAB INFORMATICA LTDA.",
+  "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
