@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './sobre.component.html'
 })
 
-export class SobreComponent { }
+export class SobreComponent {}

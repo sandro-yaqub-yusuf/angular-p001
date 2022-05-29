@@ -21,7 +21,7 @@ Projeto em ANGULAR 11 (site em HTML5, CSS3, Javascript e Typescript) para listar
 
 1. Instalar o NODEJS versão 12.20.0 LTS do site oficial (https://nodejs.org)
 2. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@11.2.12
-3. Instalar o JSON_SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server
+3. Instalar o JSON-SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server
 4. Instalar a biblioteca NCU com o seguinte comando => npm install -g npm-check-updates
 
 ----
