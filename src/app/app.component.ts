@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ANGULAR v11 - Projeto 001';
+  title = 'ANGULAR v13 - Projeto 001';
 }

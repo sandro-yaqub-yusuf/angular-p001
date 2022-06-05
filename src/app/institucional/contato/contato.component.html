@@ -4,34 +4,52 @@
         <h1 class="display-3">Contatos</h1>
         <p class="lead">Aqui você pode colocar um mapa para informar seu local de trabalho.</p>
     </header>
-    <form class="mbr-form">
+    <form class="contato-form" (ngSubmit)="adicionar()" [formGroup]="contatoForm">
         <div class="row row-sm-offset">
-            <div class="col-md-4 multi-horizontal" data-for="name">
+            <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="name-form1-2w">Nome</label>
-                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-2w">
+                    <label class="form-control-label mbr-fonts-style display-7" for="contato-nome-label">Nome</label>
+                    <input type="text" class="form-control" name="name" placeholder="Digite seu Nome completo..." id="contato-nome" formControlName="nome" [ngClass]="{'is-invalid': contatoForm.get('nome')?.errors && (contatoForm.get('nome')?.dirty || contatoForm.get('nome')?.touched)}" />
+                    <span class="text-danger" *ngIf="contatoForm.get('nome')?.errors && (contatoForm.get('nome')?.dirty || contatoForm.get('nome')?.touched)"><p>Preencha o campo Nome</p></span>
                 </div>
             </div>
-            <div class="col-md-4 multi-horizontal" data-for="email">
+            <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="email-form1-2w">E-mail</label>
-                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="email-form1-2w">
+                    <label class="form-control-label mbr-fonts-style display-7" for="contato-email-label">E-mail</label>
+                    <input type="email" class="form-control" name="email" placeholder="Digite seu E-mail..." id="contato-email" formControlName="email" [ngClass]="{'is-invalid': contatoForm.get('email')?.errors && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)}" />
+                    <span class="text-danger" *ngIf="contatoForm.get('email')?.errors?.['required'] && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)"><p>Preencha o campo E-mail</p></span>
+                    <span class="text-danger" *ngIf="contatoForm.get('email')?.errors?.['email'] && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)"><p>O campo E-mail está no formato inválido</p></span>
                 </div>
             </div>
-            <div class="col-md-4 multi-horizontal" data-for="phone">
+            <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-2w">Telefone</label>
-                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="phone-form1-2w">
+                    <label class="form-control-label mbr-fonts-style display-7" for="contato-telefone-label">Telefone</label>
+                    <input type="tel" class="form-control" name="telefone" placeholder="Digite seu Telefone..." id="contato-telefone" formControlName="telefone" [ngClass]="{'is-invalid': contatoForm.get('telefone')?.errors && (contatoForm.get('telefone')?.dirty || contatoForm.get('telefone')?.touched)}" />
+                    <span class="text-danger" *ngIf="contatoForm.get('telefone')?.errors && (contatoForm.get('telefone')?.dirty || contatoForm.get('telefone')?.touched)"><p>Preencha o campo Telefone</p></span>
                 </div>
             </div>
         </div>
-        <div class="form-group" data-for="message">
-            <label class="form-control-label mbr-fonts-style display-7" for="message-form1-2w">Mensagem</label>
-            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-2w" style="max-width: 100% !important;"></textarea>
+        <div class="form-group">
+            <label class="form-control-label mbr-fonts-style display-7" for="contato-assunto-label">Assunto</label>
+            <input type="text" class="form-control" name="assunto" placeholder="Digite o Assunto..." id="contato-assunto" style="max-width: 100% !important;" formControlName="assunto" [ngClass]="{'is-invalid': contatoForm.get('assunto')?.errors && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)}" />
+            <span class="text-danger" *ngIf="contatoForm.get('assunto')?.errors?.['required'] && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)"><p>Preencha o campo Assunto</p></span>
+            <span class="text-danger" *ngIf="contatoForm.get('assunto')?.errors?.['rangeLength'] && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)"><p>Preencha o campo Assunto com o mínimo de 5 e no máximo 100 caracteres</p></span>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label mbr-fonts-style display-7" for="contato-mensagem-label">Mensagem</label>
+            <textarea type="text" class="form-control" name="mensagem" rows="7" id="contato-mensagem" style="max-width: 100% !important;" formControlName="mensagem" [ngClass]="{'is-invalid': contatoForm.get('mensagem')?.errors && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)}"></textarea>
+            <span class="text-danger" *ngIf="contatoForm.get('mensagem')?.errors?.['required'] && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)"><p>Preencha o campo Mensagem</p></span>
+            <span class="text-danger" *ngIf="contatoForm.get('mensagem')?.errors?.['rangeLength'] && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)"><p>Preencha o campo Mensagem com o mínimo de 5 e no máximo 1000 caracteres</p></span>
         </div>
         <span class="input-group-btn">
-            <button href="" type="submit" class="btn btn-primary btn-form display-4">Enviar</button>
+            <button type="submit" class="btn btn-primary btn-form display-4" [disabled]="!contatoForm.valid">Enviar</button>
         </span>
-    </form>
+        <div class="form-group mt-3">
+            <label class="form-control-label mbr-fonts-style display-7" for="label1">Formulário válido: {{ contatoForm.valid }}</label><br/>
+            <label class="form-control-label mbr-fonts-style display-7" for="label2">Formulário tocado: {{ contatoForm.touched }}</label><br/>
+            <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário sujo: {{ contatoForm.dirty }}</label><br/>
+            <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário submetido: {{ formResultado }}</label><br/>
+        </div>
+        </form>
 </div>
 <!-- END Page Content -->

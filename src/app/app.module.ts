@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { registerLocaleData } from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
 
 registerLocaleData(localePt);
 
+import { CustomFormsModule } from 'ng2-validation';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routes';
 import { NavegacaoModule } from './navegacao/navegacao.module';
@@ -26,8 +26,10 @@ import { DataBindingComponent } from './exemplos/data-binding/data-binding.compo
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    CustomFormsModule,
     NavegacaoModule    
   ],
   providers: [],
