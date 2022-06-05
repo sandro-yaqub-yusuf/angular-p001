@@ -9,37 +9,34 @@
             <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="contato-nome-label">Nome</label>
-                    <input type="text" class="form-control" name="name" placeholder="Digite seu Nome completo..." id="contato-nome" formControlName="nome" [ngClass]="{'is-invalid': contatoForm.get('nome')?.errors && (contatoForm.get('nome')?.dirty || contatoForm.get('nome')?.touched)}" />
-                    <span class="text-danger" *ngIf="contatoForm.get('nome')?.errors && (contatoForm.get('nome')?.dirty || contatoForm.get('nome')?.touched)"><p>Preencha o campo Nome</p></span>
+                    <input type="text" class="form-control" name="name" placeholder="Digite seu Nome completo..." id="contato-nome" formControlName="nome" [ngClass]="{'is-invalid': displayMessage['nome']}" />
+                    <span class="text-danger" *ngIf="displayMessage['nome']"><p [innerHTML]="displayMessage['nome']"></p></span>
                 </div>
             </div>
             <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="contato-email-label">E-mail</label>
-                    <input type="email" class="form-control" name="email" placeholder="Digite seu E-mail..." id="contato-email" formControlName="email" [ngClass]="{'is-invalid': contatoForm.get('email')?.errors && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)}" />
-                    <span class="text-danger" *ngIf="contatoForm.get('email')?.errors?.['required'] && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)"><p>Preencha o campo E-mail</p></span>
-                    <span class="text-danger" *ngIf="contatoForm.get('email')?.errors?.['email'] && (contatoForm.get('email')?.dirty || contatoForm.get('email')?.touched)"><p>O campo E-mail está no formato inválido</p></span>
+                    <input type="email" class="form-control" name="email" placeholder="Digite seu E-mail..." id="contato-email" formControlName="email" [ngClass]="{'is-invalid': displayMessage['email']}" />
+                    <span class="text-danger" *ngIf="displayMessage['email']"><p [innerHTML]="displayMessage['email']"></p></span>
                 </div>
             </div>
             <div class="col-md-4 multi-horizontal">
                 <div class="form-group">
                     <label class="form-control-label mbr-fonts-style display-7" for="contato-telefone-label">Telefone</label>
-                    <input type="tel" class="form-control" name="telefone" placeholder="Digite seu Telefone..." id="contato-telefone" formControlName="telefone" [ngClass]="{'is-invalid': contatoForm.get('telefone')?.errors && (contatoForm.get('telefone')?.dirty || contatoForm.get('telefone')?.touched)}" />
-                    <span class="text-danger" *ngIf="contatoForm.get('telefone')?.errors && (contatoForm.get('telefone')?.dirty || contatoForm.get('telefone')?.touched)"><p>Preencha o campo Telefone</p></span>
+                    <input type="tel" class="form-control" name="telefone" placeholder="Digite seu Telefone..." id="contato-telefone" formControlName="telefone" [ngClass]="{'is-invalid': displayMessage['telefone']}" />
+                    <span class="text-danger" *ngIf="displayMessage['telefone']"><p [innerHTML]="displayMessage['telefone']"></p></span>
                 </div>
             </div>
         </div>
         <div class="form-group">
             <label class="form-control-label mbr-fonts-style display-7" for="contato-assunto-label">Assunto</label>
-            <input type="text" class="form-control" name="assunto" placeholder="Digite o Assunto..." id="contato-assunto" style="max-width: 100% !important;" formControlName="assunto" [ngClass]="{'is-invalid': contatoForm.get('assunto')?.errors && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)}" />
-            <span class="text-danger" *ngIf="contatoForm.get('assunto')?.errors?.['required'] && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)"><p>Preencha o campo Assunto</p></span>
-            <span class="text-danger" *ngIf="contatoForm.get('assunto')?.errors?.['rangeLength'] && (contatoForm.get('assunto')?.dirty || contatoForm.get('assunto')?.touched)"><p>Preencha o campo Assunto com o mínimo de 5 e no máximo 100 caracteres</p></span>
+            <input type="text" class="form-control" name="assunto" placeholder="Digite o Assunto..." id="contato-assunto" style="max-width: 100% !important;" formControlName="assunto" [ngClass]="{'is-invalid': displayMessage['assunto']}" />
+            <span class="text-danger" *ngIf="displayMessage['assunto']"><p [innerHTML]="displayMessage['assunto']"></p></span>
         </div>
         <div class="form-group">
             <label class="form-control-label mbr-fonts-style display-7" for="contato-mensagem-label">Mensagem</label>
-            <textarea type="text" class="form-control" name="mensagem" rows="7" id="contato-mensagem" style="max-width: 100% !important;" formControlName="mensagem" [ngClass]="{'is-invalid': contatoForm.get('mensagem')?.errors && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)}"></textarea>
-            <span class="text-danger" *ngIf="contatoForm.get('mensagem')?.errors?.['required'] && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)"><p>Preencha o campo Mensagem</p></span>
-            <span class="text-danger" *ngIf="contatoForm.get('mensagem')?.errors?.['rangeLength'] && (contatoForm.get('mensagem')?.dirty || contatoForm.get('mensagem')?.touched)"><p>Preencha o campo Mensagem com o mínimo de 5 e no máximo 1000 caracteres</p></span>
+            <textarea type="text" class="form-control" name="mensagem" rows="7" id="contato-mensagem" style="max-width: 100% !important;" formControlName="mensagem" [ngClass]="{'is-invalid': displayMessage['mensagem']}"></textarea>
+            <span class="text-danger" *ngIf="displayMessage['mensagem']"><p [innerHTML]="displayMessage['mensagem']"></p></span>
         </div>
         <span class="input-group-btn">
             <button type="submit" class="btn btn-primary btn-form display-4" [disabled]="!contatoForm.valid">Enviar</button>
