@@ -3,10 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { CustomFormsModule } from 'ng2-validation'
-import { NgBrazil } from 'ng-brazil'
 import { registerLocaleData } from '@angular/common';
-import { TextMask } from 'ng-brazil';
 
 import localePt from '@angular/common/locales/pt';
 

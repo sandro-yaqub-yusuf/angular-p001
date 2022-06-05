@@ -1,7 +1,7 @@
-# Angular 11 - PROJETO 001
+# Angular 13 - PROJETO 001
 
-* Versão do NODEJS utilizado: 12.20.0 LTS
-* Versão do ANGULAR e ANGULAR CLI utilizado: 11.2.12
+* Versão do NODEJS utilizado: 16.15.0 LTS
+* Versão do ANGULAR e ANGULAR CLI utilizado: 13.3.7
 * Linguagem principal utilizada: Typescript
 * Outras linguagens utilizadas: HTML5, CSS3 e Javascript
 * Frameworks utilizadas: TYPESCRIPT, RXJS, TSLIB e ZONE.JS
@@ -13,14 +13,14 @@
 
 ## Descrição:
 
-Projeto em ANGULAR 11 (site em HTML5, CSS3, Javascript e Typescript) para listar Produtos e formulários SOBRE e CONTATOS.
+Projeto em ANGULAR 13 (site em HTML5, CSS3, Javascript e Typescript) para listar Produtos e formulários SOBRE e CONTATOS.
 
 ----
 
 ## Instalação Global dos pacotes para o NODEJS:
 
-1. Instalar o NODEJS versão 12.20.0 LTS do site oficial (https://nodejs.org)
-2. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@11.2.12
+1. Instalar o NODEJS versão 16.15.0 LTS do site oficial (https://nodejs.org)
+2. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@13.3.7
 3. Instalar o JSON-SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server
 4. Instalar a biblioteca NCU com o seguinte comando => npm install -g npm-check-updates
 
@@ -34,7 +34,8 @@ Projeto em ANGULAR 11 (site em HTML5, CSS3, Javascript e Typescript) para listar
 
 ## Banco de Dados:
 
-1. Não será usado Banco de Dados neste projeto. No lugar do mesmo foi criado um arquivo "produtos.json"
+1. Não será usado Banco de Dados neste projeto
+2. No lugar do mesmo foi criado um arquivo "produtos.json" para ser usado com o JSON-SERVER
 
 ----
 
