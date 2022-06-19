@@ -1,7 +1,7 @@
 # Angular 13 - PROJETO 001
 
-* Versão do NODEJS utilizado: 16.15.0 LTS
-* Versão do ANGULAR e ANGULAR CLI utilizado: 13.3.7
+* Versão do NODEJS utilizado: 16.15.1 LTS
+* Versão do ANGULAR e ANGULAR CLI utilizado: 13.3.8
 * Linguagem principal utilizada: Typescript
 * Outras linguagens utilizadas: HTML5, CSS3 e Javascript
 * Frameworks utilizadas: TYPESCRIPT, RXJS, TSLIB e ZONE.JS
@@ -19,10 +19,12 @@ Projeto em ANGULAR 13 (site em HTML5, CSS3, Javascript e Typescript) para listar
 
 ## Instalação Global dos pacotes para o NODEJS:
 
-1. Instalar o NODEJS versão 16.15.0 LTS do site oficial (https://nodejs.org)
-2. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@13.3.7
-3. Instalar o JSON-SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server
-4. Instalar a biblioteca NCU com o seguinte comando => npm install -g npm-check-updates
+1. Instalar a biblioteca NCU com o seguinte comando => npm install -g npm-check-updates (saia do terminal e entre novamente após a instalação)
+2. Instalar o NODEJS versão 16.15.1 LTS do site oficial (https://nodejs.org) com o seguinte comando => nvm install 16.15.1
+3. Ativar o NODEJS com o seguinte comando => nvm use 16.15.1
+4. Atualizar o NPM para a versão 8.12.2 com o seguinte comando => npm install -g npm@8.12.2
+5. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@13.3.8
+6. Instalar o JSON-SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server
 
 ----
 

@@ -13,9 +13,13 @@ export class ListaProdutosComponent implements OnInit {
   public produtos: Produto[] = [];
 
   ngOnInit(): void {
-    this.produtoService.obterProdutos().subscribe(
-      produtos => { this.produtos = produtos; },
-      error => { console.log(error); }
-    )   
+    this.produtoService.obterProdutos().subscribe({
+      next: (produtos: Produto[]): Produto[] => {
+        return this.produtos = produtos;
+      },
+      error: (error) => { 
+        console.log(error); 
+      }
+    });
   }
 }
