@@ -14,10 +14,10 @@ export class ListaProdutosComponent implements OnInit {
 
   ngOnInit(): void {
     this.produtoService.obterProdutos().subscribe({
-      next: (produtos: Produto[]): Produto[] => {
-        return this.produtos = produtos;
+      next: (produtos: Produto[]): void => {
+        this.produtos = produtos;
       },
-      error: (error) => { 
+      error: (error): void => { 
         console.log(error); 
       }
     });
