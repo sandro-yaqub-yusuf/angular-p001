@@ -7,22 +7,22 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-    declarations: [
-        MenuComponent,
-        HomeComponent,
-        FooterComponent,
-        NotFoundComponent
-    ],
-    imports: [
-        CommonModule,
-        RouterModule
-    ],
-    exports: [
-        MenuComponent,
-        HomeComponent,
-        FooterComponent,
-        NotFoundComponent
-    ]
+  declarations: [
+    MenuComponent,
+    HomeComponent,
+    FooterComponent,
+    NotFoundComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
+  exports: [
+    MenuComponent,
+    HomeComponent,
+    FooterComponent,
+    NotFoundComponent
+  ]
 })
 
 export class NavegacaoModule {}

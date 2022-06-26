@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 
 export class DataBindingComponent { 
   public contadorClique: number = 0;  
-  public urlImagem: string = "https://angular.io/assets/images/logos/angular/angular.svg";
-  public nome1: string = "";
-  public nome2: string = "";
-  public nome3: string = "";
+  public urlImagem: string = 'https://angular.io/assets/images/logos/angular/angular.svg';
+  public nome1: string = '';
+  public nome2: string = '';
+  public nome3: string = '';
 
   adicionarContador(){
-    if (this.contadorClique < 15) this.contadorClique++;
+    if (this.contadorClique < 15) { this.contadorClique++; }
   }
 
   zerarContador(){

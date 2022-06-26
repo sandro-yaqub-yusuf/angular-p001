@@ -17,6 +17,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [ 
+              "babel-runtime/helpers/createClass",
+              "babel-runtime/core-js/get-iterator",
+              "babel-runtime/helpers/extends",
+              "babel-runtime/helpers/slicedToArray",
+              "ng2-validation"
+            ],            
             "outputPath": "dist/angular-p001",
             "index": "src/index.html",
             "main": "src/main.ts",

@@ -33,7 +33,9 @@ import { DataBindingComponent } from './exemplos/data-binding/data-binding.compo
     NavegacaoModule    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule { }

@@ -1,52 +1,52 @@
 <!-- BEGIN Page Content -->
 <div class="container main-container">
-    <header class="jumbotron my-4">
-        <h1 class="display-3">Contatos</h1>
-        <p class="lead">Aqui você pode colocar um mapa para informar seu local de trabalho.</p>
-    </header>
-    <form class="contato-form" (ngSubmit)="adicionar()" [formGroup]="contatoForm">
-        <div class="row row-sm-offset">
-            <div class="col-md-4 multi-horizontal">
-                <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="contato-nome-label">Nome</label>
-                    <input type="text" class="form-control" name="name" placeholder="Digite seu Nome completo..." id="contato-nome" formControlName="nome" [ngClass]="{'is-invalid': displayMessage['nome']}" />
-                    <span class="text-danger" *ngIf="displayMessage['nome']"><p [innerHTML]="displayMessage['nome']"></p></span>
-                </div>
-            </div>
-            <div class="col-md-4 multi-horizontal">
-                <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="contato-email-label">E-mail</label>
-                    <input type="email" class="form-control" name="email" placeholder="Digite seu E-mail..." id="contato-email" formControlName="email" [ngClass]="{'is-invalid': displayMessage['email']}" />
-                    <span class="text-danger" *ngIf="displayMessage['email']"><p [innerHTML]="displayMessage['email']"></p></span>
-                </div>
-            </div>
-            <div class="col-md-4 multi-horizontal">
-                <div class="form-group">
-                    <label class="form-control-label mbr-fonts-style display-7" for="contato-telefone-label">Telefone</label>
-                    <input type="tel" class="form-control" name="telefone" placeholder="Digite seu Telefone..." id="contato-telefone" formControlName="telefone" [ngClass]="{'is-invalid': displayMessage['telefone']}" />
-                    <span class="text-danger" *ngIf="displayMessage['telefone']"><p [innerHTML]="displayMessage['telefone']"></p></span>
-                </div>
-            </div>
-        </div>
+  <header class="jumbotron my-4">
+    <h1 class="display-3">Contatos</h1>
+    <p class="lead">Aqui você pode colocar um mapa para informar seu local de trabalho.</p>
+  </header>
+  <form class="contato-form" (ngSubmit)="adicionar()" [formGroup]="contatoForm">
+    <div class="row row-sm-offset">
+      <div class="col-md-4 multi-horizontal">
         <div class="form-group">
-            <label class="form-control-label mbr-fonts-style display-7" for="contato-assunto-label">Assunto</label>
-            <input type="text" class="form-control" name="assunto" placeholder="Digite o Assunto..." id="contato-assunto" style="max-width: 100% !important;" formControlName="assunto" [ngClass]="{'is-invalid': displayMessage['assunto']}" />
-            <span class="text-danger" *ngIf="displayMessage['assunto']"><p [innerHTML]="displayMessage['assunto']"></p></span>
+          <label class="form-control-label mbr-fonts-style display-7" for="contato-nome-label">Nome</label>
+          <input type="text" class="form-control" name="name" placeholder="Digite seu Nome completo..." id="contato-nome" formControlName="nome" [ngClass]="{'is-invalid': displayMessage['nome']}" />
+          <span class="text-danger" *ngIf="displayMessage['nome']"><p [innerHTML]="displayMessage['nome']"></p></span>
         </div>
+      </div>
+      <div class="col-md-4 multi-horizontal">
         <div class="form-group">
-            <label class="form-control-label mbr-fonts-style display-7" for="contato-mensagem-label">Mensagem</label>
-            <textarea type="text" class="form-control" name="mensagem" rows="7" id="contato-mensagem" style="max-width: 100% !important;" formControlName="mensagem" [ngClass]="{'is-invalid': displayMessage['mensagem']}"></textarea>
-            <span class="text-danger" *ngIf="displayMessage['mensagem']"><p [innerHTML]="displayMessage['mensagem']"></p></span>
+          <label class="form-control-label mbr-fonts-style display-7" for="contato-email-label">E-mail</label>
+          <input type="email" class="form-control" name="email" placeholder="Digite seu E-mail..." id="contato-email" formControlName="email" [ngClass]="{'is-invalid': displayMessage['email']}" />
+          <span class="text-danger" *ngIf="displayMessage['email']"><p [innerHTML]="displayMessage['email']"></p></span>
         </div>
-        <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary btn-form display-4" [disabled]="!contatoForm.valid">Enviar</button>
-        </span>
-        <div class="form-group mt-3">
-            <label class="form-control-label mbr-fonts-style display-7" for="label1">Formulário válido: {{ contatoForm.valid }}</label><br/>
-            <label class="form-control-label mbr-fonts-style display-7" for="label2">Formulário tocado: {{ contatoForm.touched }}</label><br/>
-            <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário sujo: {{ contatoForm.dirty }}</label><br/>
-            <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário submetido: {{ formResultado }}</label><br/>
+      </div>
+      <div class="col-md-4 multi-horizontal">
+        <div class="form-group">
+          <label class="form-control-label mbr-fonts-style display-7" for="contato-telefone-label">Telefone</label>
+          <input type="tel" class="form-control" name="telefone" placeholder="Digite seu Telefone..." id="contato-telefone" formControlName="telefone" [ngClass]="{'is-invalid': displayMessage['telefone']}" />
+          <span class="text-danger" *ngIf="displayMessage['telefone']"><p [innerHTML]="displayMessage['telefone']"></p></span>
         </div>
-        </form>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label mbr-fonts-style display-7" for="contato-assunto-label">Assunto</label>
+      <input type="text" class="form-control" name="assunto" placeholder="Digite o Assunto..." id="contato-assunto" style="max-width: 100% !important;" formControlName="assunto" [ngClass]="{'is-invalid': displayMessage['assunto']}" />
+      <span class="text-danger" *ngIf="displayMessage['assunto']"><p [innerHTML]="displayMessage['assunto']"></p></span>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label mbr-fonts-style display-7" for="contato-mensagem-label">Mensagem</label>
+      <textarea type="text" class="form-control" name="mensagem" rows="7" id="contato-mensagem" style="max-width: 100% !important;" formControlName="mensagem" [ngClass]="{'is-invalid': displayMessage['mensagem']}"></textarea>
+      <span class="text-danger" *ngIf="displayMessage['mensagem']"><p [innerHTML]="displayMessage['mensagem']"></p></span>
+    </div>
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-primary btn-form display-4" [disabled]="!contatoForm.valid">Enviar</button>
+    </span>
+    <div class="form-group mt-3">
+      <label class="form-control-label mbr-fonts-style display-7" for="label1">Formulário válido: {{ contatoForm.valid }}</label><br/>
+      <label class="form-control-label mbr-fonts-style display-7" for="label2">Formulário tocado: {{ contatoForm.touched }}</label><br/>
+      <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário sujo: {{ contatoForm.dirty }}</label><br/>
+      <label class="form-control-label mbr-fonts-style display-7" for="label3">Formulário submetido: {{ formResultado }}</label><br/>
+    </div>
+  </form>
 </div>
 <!-- END Page Content -->

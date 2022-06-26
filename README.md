@@ -22,7 +22,7 @@ Projeto em ANGULAR 13 (site em HTML5, CSS3, Javascript e Typescript) para listar
 1. Instalar o NODE VERSION MANAGER de acordo com o seu SO do git oficial (https://github.com/nvm-sh/nvm) e depois de instalado, saia do terminal e entre novamente e verifique se o mesmo foi instalado com o seguinte comando => nvm -v
 2. Instalar o NODEJS versão 16.15.1 LTS do site oficial (https://nodejs.org) com o seguinte comando => nvm install 16.15.1
 3. Ativar o NODEJS com o seguinte comando => nvm use 16.15.1
-4. Atualizar o NPM para a versão 8.12.2 com o seguinte comando => npm install -g npm@8.12.2
+4. Atualizar o NPM para a versão mais recente com o seguinte comando => npm install -g npm@latest
 5. Instalar a biblioteca NCU com o seguinte comando => npm install -g npm-check-updates
 6. Instalar o ANGULAR CLI com o seguinte comando => npm install -g @angular/cli@13.3.8
 7. Instalar o JSON-SERVER (para simular um back-end) com o seguinte comando => npm install -g json-server

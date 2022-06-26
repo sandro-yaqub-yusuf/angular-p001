@@ -1,0 +1,10 @@
+<div class="container main-container">
+  <h1 #titulo>Lista de Produtos</h1>
+  <produto-count [produtos]="produtos"></produto-count>
+  <div class="row text-center">
+    <produto-card-detalhe *ngFor="let produto of produtos;" [produto]="produto" (status)="mudarStatus($event);" class="col-md-4">
+      <h5 class="aproveite">Aproveite antes que acabe !!!</h5>
+      <h5 class="fora-estoque">Ou vá em uma de nossas lojas</h5>
+    </produto-card-detalhe>
+  </div>
+</div>

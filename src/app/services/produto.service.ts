@@ -7,7 +7,7 @@ import { Produto } from '../models/produto';
   providedIn: 'root'
 })
 
-export class ProdutosService {
+export class ProdutoService {
   constructor(private http: HttpClient) {}
 
   protected urlServiceV1: string = 'http://localhost:3000/';
