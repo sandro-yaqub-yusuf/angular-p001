@@ -2,15 +2,15 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vie
 import { fromEvent, Observable } from 'rxjs';
 import { Produto } from '../../models/produto';
 import { ProdutoService } from '../../services/produto.service';
-import { ProdutoCardDetalheComponent } from '../components/produto-card-detalhe.component';
-import { ProdutoCountComponent } from '../components/produto-count.component';
+import { ProdutoCardDetalheComponent } from '../componentes/produto-card-detalhe.component';
+import { ProdutoCountComponent } from '../componentes/produto-count.component';
 
 @Component({
   selector: 'app-lista-produtos',
-  templateUrl: './lista-produtos.component.html'
+  templateUrl: './produto-lista.component.html'
 })
 
-export class ListaProdutosComponent implements OnInit, AfterViewInit { 
+export class ProdutoListaComponent implements OnInit, AfterViewInit { 
   constructor(private produtoService: ProdutoService) {}
 
   public produtos: Produto[] = [];

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Produto } from 'src/app/models/produto';
+import { Produto } from '../../models/produto';
 
 @Component({
   selector: 'produto-count',

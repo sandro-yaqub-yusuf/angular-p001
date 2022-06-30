@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
-import { ProdutoCardDetalheComponent } from './components/produto-card-detalhe.component';
-import { ProdutoCountComponent } from './components/produto-count.component';
+import { ProdutoListaComponent } from './lista/produto-lista.component';
+import { ProdutoCardDetalheComponent } from './componentes/produto-card-detalhe.component';
+import { ProdutoCountComponent } from './componentes/produto-count.component';
 import { ProdutoRoutingModule } from './produto.routes';
 
 @NgModule({
   declarations: [
-    ListaProdutosComponent,
+    ProdutoListaComponent,
     ProdutoCardDetalheComponent,
     ProdutoCountComponent
   ],
   imports: [
     CommonModule,
     ProdutoRoutingModule
-  ],
-  exports: []
+  ]
 })
   
 export class ProdutoModule {}

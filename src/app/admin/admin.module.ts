@@ -10,9 +10,7 @@ import { AdminRoutingModule } from './admin.routes';
   imports: [
     CommonModule,
     AdminRoutingModule
-  ],
-  providers: [],
-  exports: []
+  ]
 })
   
 export class AdminModule {}

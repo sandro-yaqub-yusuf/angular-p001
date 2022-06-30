@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
@@ -17,18 +18,17 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBindingComponent } from './exemplos/data-binding/data-binding.component';
-import { FilmeComponent } from './filme/filme.component';
 
 @NgModule({
   declarations: [		
     AppComponent,
     SobreComponent,
     ContatoComponent,
-    DataBindingComponent,
-    FilmeComponent
+    DataBindingComponent
    ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

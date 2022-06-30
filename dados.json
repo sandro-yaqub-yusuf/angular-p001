@@ -88,35 +88,35 @@
       "dataLancamento": "1994-07-12",
       "valor": 150.00,
       "imagem": "sonhoLiberdade.jpg",
-      "tamanho": "513326980"
+      "tamanho": 513326980
     },
     {
       "nome": "O Poderoso Chefão",
       "dataLancamento": "1972-12-01",
       "valor": 200.00,
       "imagem": "poderosoChefaoI.jpg",
-      "tamanho": "1342177280"
+      "tamanho": 1342177280
     },
     {
       "nome": "Batman: O Cavaleiro das Trevas ",
       "dataLancamento": "2008-01-08",
       "valor": 70.00,
       "imagem": "batman2008.jpg",
-      "tamanho": "719974720"
+      "tamanho": 719974720
     },
     {
       "nome": "o poderoso chefão 2",
       "dataLancamento": "1974-12-01",
       "valor": 120.00,
       "imagem": "poderosoChefaoII.jpg",
-      "tamanho": "1254589899"
+      "tamanho": 1254589899
     },
     {
       "nome": "Pulp Fiction: Tempo de Violência ",
       "dataLancamento": "1994-08-01",
       "valor": 190.00,
       "imagem": "pulpFiction.jpg",
-      "tamanho": "773039680"
+      "tamanho": 773039680
     }
   ]
 }
