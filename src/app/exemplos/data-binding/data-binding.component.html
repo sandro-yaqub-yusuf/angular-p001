@@ -9,7 +9,7 @@
     }">O número de cliques é: {{ contadorClique }}
   </p>
 
-  <br /><hr><br />
+  <hr>
 
   <h3>Property Binding</h3>
 
@@ -19,13 +19,13 @@
 
   <img [src]="urlImagem" height="50px" width="50px" />
 
-  <br /><br /><hr><br />
+  <br /><hr>
 
   <h3>Event Binding</h3>
   <button class="btn btn-warning" (click)='adicionarContador()'>Adicionar Contagem</button>&nbsp;
   <button class="btn btn-danger" (click)='zerarContador()' [disabled]='contadorClique < 10'>Zerar Contador</button>
     
-  <br /><br /><br /><hr><br />
+  <br /><hr>
     
   <h3>Two-way Binding</h3>
 

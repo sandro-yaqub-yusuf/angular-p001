@@ -11,18 +11,22 @@ registerLocaleData(localePt);
 import { CustomFormsModule } from 'ng2-validation';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routes';
+import { AuthGuard } from './services/app.guard';
+import { ContatoGuard } from './services/contato.guard';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBindingComponent } from './exemplos/data-binding/data-binding.component';
+import { FilmeComponent } from './filme/filme.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     SobreComponent,
     ContatoComponent,
-    DataBindingComponent
-  ],
+    DataBindingComponent,
+    FilmeComponent
+   ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -32,10 +36,13 @@ import { DataBindingComponent } from './exemplos/data-binding/data-binding.compo
     CustomFormsModule,
     NavegacaoModule    
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    ContatoGuard
+  ],
   bootstrap: [
     AppComponent
   ]
 })
 
-export class AppModule { }
+export class AppModule {}

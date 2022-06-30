@@ -14,6 +14,18 @@ export class MenuComponent {
       admin: false
     },
     {
+      link: '/admin',
+      name: 'Administração',
+      exact: false,
+      admin: false
+    },
+    {
+      link: '/filmes',
+      name: 'Filmes',
+      exact: false,
+      admin: false
+    },
+    {
       link: '/produtos',
       name: 'Produtos',
       exact: false,

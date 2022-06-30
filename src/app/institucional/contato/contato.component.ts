@@ -16,6 +16,7 @@ export class ContatoComponent implements OnInit, AfterViewInit {
   contatoForm!: FormGroup;
   contato!: Contato;
   formResultado: string = '';
+  mudancasNaoSalvas: boolean = false;
 
   validationMessages!: ValidationMessages;
   genericValidator!: GenericValidatior;
@@ -65,6 +66,7 @@ export class ContatoComponent implements OnInit, AfterViewInit {
 
     merge(...controlBlurs).subscribe(() => {
       this.displayMessage = this.genericValidator.processarMensagens(this.contatoForm);
+      this.mudancasNaoSalvas = true;
     });
   };
 
@@ -73,6 +75,7 @@ export class ContatoComponent implements OnInit, AfterViewInit {
       this.contato = Object.assign({}, this.contato, this.contatoForm.value);
 
       this.formResultado = JSON.stringify(this.contatoForm.value);
+      this.mudancasNaoSalvas = false;
     }
     else {
       this.formResultado = 'Formulário inválido para submeter !!!';
